@@ -12,7 +12,7 @@ import Flame from "@/components/Flame";
 import Burn from "@/components/Burn";
 import CalendarSlip from "@/components/CalendarSlip";
 import PapersSlip from "@/components/PapersSlip";
-import { CalendarIcon, PapersIcon, Pen } from "@/components/Icons";
+import { CalendarIcon, PapersIcon, Pen, Ring } from "@/components/Icons";
 import FitLine from "@/components/FitLine";
 
 const store = {
@@ -276,17 +276,28 @@ export default function Home() {
             autoComplete="off"
             maxLength={140}
           />
-          <button type="button" className="btn" onClick={() => setSheet("calendar")} aria-label="Calendário">
-            <CalendarIcon />
-          </button>
-          <button
-            type="button"
-            className="btn"
-            onClick={() => setSheet("papers")}
-            aria-label={toNext !== null ? `Folhas. Faltam ${toNext} pontos para a próxima` : "Folhas"}
-          >
-            <PapersIcon />
-          </button>
+          {draft.trim() ? (
+            // escrevendo: o botão de anotar toma o lugar do calendário e das folhas.
+            // preventDefault no toque mantém o teclado aberto pra anotar a próxima.
+            <button type="submit" className="jot" onPointerDown={(e) => e.preventDefault()}>
+              <Ring className="jot-ring" />
+              anotar
+            </button>
+          ) : (
+            <>
+              <button type="button" className="btn" onClick={() => setSheet("calendar")} aria-label="Calendário">
+                <CalendarIcon />
+              </button>
+              <button
+                type="button"
+                className="btn"
+                onClick={() => setSheet("papers")}
+                aria-label={toNext !== null ? `Folhas. Faltam ${toNext} pontos para a próxima` : "Folhas"}
+              >
+                <PapersIcon />
+              </button>
+            </>
+          )}
         </form>
 
         {burntNow && <Burn />}

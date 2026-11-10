@@ -551,6 +551,45 @@ body {
   width: 28px;
   height: 28px;
 }
+/* "anotar": aparece enquanto há texto, no lugar do calendário e das folhas;
+   oval desenhado à mão em volta da palavra, na tinta da folha */
+.jot {
+  position: relative;
+  flex-shrink: 0;
+  min-width: 92px;
+  height: 46px;
+  margin-left: 4px;
+  padding: 0 14px;
+  background: none;
+  border: 0;
+  color: var(--ink);
+  font: inherit;
+  font-size: calc(var(--fs) * 0.92);
+  cursor: pointer;
+  animation: jot-in 0.22s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.jot-ring {
+  position: absolute;
+  inset: 2px 0;
+  width: 100%;
+  height: calc(100% - 4px);
+  color: var(--ink);
+  pointer-events: none;
+}
+.jot:active {
+  transform: scale(0.94);
+}
+.jot:focus-visible {
+  outline: 2px dashed var(--ink-soft);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+@keyframes jot-in {
+  from {
+    opacity: 0;
+    transform: translateX(6px);
+  }
+}
 .btn:active {
   transform: scale(0.92);
 }
