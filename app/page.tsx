@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Task } from "@/lib/types";
 import { parseDateStr, todayStr } from "@/lib/date";
 import { computeProgress } from "@/lib/progress";
-import { PAPERS, levelFor } from "@/lib/papers";
+import { MIN_TASKS, PAPERS, levelFor } from "@/lib/papers";
 import { deleteTask, newTask, restoreTask, saveTask, watchTasks, watchUser } from "@/lib/cloud";
 import LoginView from "@/components/LoginView";
 import TaskLine from "@/components/TaskLine";
@@ -162,18 +162,26 @@ export default function Home() {
   const weekday = d.toLocaleDateString("pt-BR", { weekday: "long" }).replace(/-feira$/, "");
   const dayLabel = `${weekday}, ${d.toLocaleDateString("pt-BR", { day: "numeric", month: "long" })}`;
   // forma curta pra telas estreitas: "terça, 10 nov."
-  const dayShort = `${weekday}, ${d.getDate()} ${d.toLocaleDateString("pt-BR", { month: "short" }).replace(/.$/, "")}.`;
+  const dayShort = `${weekday}, ${d.getDate()} ${d.toLocaleDateString("pt-BR", { month: "short" }).replace(/\.$/, "")}.`;
+
+  // o dia só conta com MIN_TASKS tarefas: enquanto faltar, a meta diz quantas escrever
+  const missing = Math.max(0, MIN_TASKS - todays.length);
+  const goal =
+    missing > 0
+      ? `escreva mais ${missing} ${missing === 1 ? "tarefa" : "tarefas"} e faça mais da metade`
+      : "faça mais da metade";
+  const Goal = goal[0].toUpperCase() + goal.slice(1);
 
   let status: React.ReactNode;
   if (!loaded) status = "abrindo o caderno…";
   else if (progress.burnt && !progress.litToday)
     status = progress.droppedFrom !== null ? (
       <>
-        O fogo apagou e a folha queimou. Você voltou pra <strong>{PAPERS[levelFor(progress.xp)].name.toLowerCase()}</strong>. Faça
-        mais da metade hoje pra reacender.
+        O fogo apagou e a folha queimou. Você voltou pra <strong>{PAPERS[levelFor(progress.xp)].name.toLowerCase()}</strong>. {Goal}{" "}
+        hoje pra reacender.
       </>
     ) : (
-      <>O fogo apagou. Faça mais da metade hoje pra reacender.</>
+      <>O fogo apagou. {Goal} hoje pra reacender.</>
     );
   else if (progress.litToday)
     status =
@@ -182,9 +190,9 @@ export default function Home() {
       ) : (
         <>Fogo de hoje aceso. Termine tudo pra ganhar mais pontos.</>
       );
-  else if (progress.streak > 0) status = <>Faça mais da metade hoje pra manter o fogo.</>;
-  else if (todays.length === 0) status = <>Escreva o que você quer fazer hoje.</>;
-  else status = <>Faça mais da metade pra acender o fogo.</>;
+  else if (progress.streak > 0) status = <>{Goal} hoje pra manter o fogo.</>;
+  else if (todays.length === 0) status = <>Escreva o que você quer fazer hoje. O dia conta com {MIN_TASKS} tarefas ou mais.</>;
+  else status = <>{Goal} pra acender o fogo.</>;
 
   const burntNow = loaded && progress.burnt && !progress.litToday;
   const toNext = progress.nextAt !== null ? progress.nextAt - progress.xp : null;

@@ -1,6 +1,6 @@
 "use client";
 
-import { PAPERS, XP_FULL, XP_HALF } from "@/lib/papers";
+import { MIN_TASKS, PAPERS, XP_FULL, XP_HALF } from "@/lib/papers";
 import { Close, Lock } from "./Icons";
 
 type Props = {
@@ -24,7 +24,7 @@ export default function PapersSlip({ paper, xp, level, onPick, onClose }: Props)
         </div>
         <div className="slip-body">
           <p className="note">
-            Mais da metade do dia feita: <strong>+{XP_HALF}</strong> pontos. Tudo feito: <strong>+{XP_FULL}</strong>. Se o fogo
+            Dia com {MIN_TASKS} tarefas ou mais e mais da metade feita: <strong>+{XP_HALF}</strong> pontos. Tudo feito: <strong>+{XP_FULL}</strong>. Se o fogo
             apagar, a folha queima e você volta uma folha. Você tem <strong>{xp}</strong> pontos.
           </p>
           <div className="papers">

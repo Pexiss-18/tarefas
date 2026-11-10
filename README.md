@@ -40,8 +40,8 @@ Uma tela só, feita pro celular: as tarefas do dia escritas numa folha de cadern
 - **Escrever** na linha de baixo e Enter adiciona a tarefa em hoje.
 - **Tocar** na tarefa risca/desrisca. **Arrastar pra esquerda** apaga (com "desfazer").
 - **Calendário** (ícone ou toque no fogo): veja qualquer dia anterior, corrija o que marcou e copie pendentes pra hoje.
-- **Fogo (streak):** dias seguidos com **mais de 50%** das tarefas feitas. A chama muda com o tamanho do streak (faísca → chama → fogueira → fogo azul → fogo místico). Enquanto hoje não passou de 50%, ela fica apagadinha esperando.
-- **Pontos:** dia com mais de 50% = **+10**, dia com 100% = **+15**. Os pontos desbloqueiam folhas e canetas novas:
+- **Fogo (streak):** dias seguidos com **4 tarefas ou mais** e **mais de 50%** delas feitas. A chama muda com o tamanho do streak (faísca → chama → fogueira → fogo azul → fogo místico). Enquanto hoje não passou de 50%, ela fica apagadinha esperando.
+- **Pontos:** dia que conta (4+ tarefas) com mais de 50% = **+10**, com 100% = **+15**. Os pontos desbloqueiam folhas e canetas novas:
 
 | Pontos | Folha | Caneta |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ Uma tela só, feita pro celular: as tarefas do dia escritas numa folha de cadern
 | 350 | Papel de algodão | Caneta-tinteiro |
 | 480 | Caderno preto | Gel dourada |
 
-- **Fogo apagou:** se um dia passa sem chegar a mais de 50% (inclusive dia sem tarefas), o streak zera, a folha fica **queimada** e você **volta uma folha**. Ao fazer mais da metade de novo, o fogo reacende e a queimadura some.
+- **Fogo apagou:** se um dia passa sem chegar a mais de 50%, com menos de 4 tarefas ou sem tarefas, o streak zera, a folha fica **queimada** e você **volta uma folha**. Ao fazer mais da metade de novo, o fogo reacende e a queimadura some.
 - No ícone de folhas dá pra escolher qualquer folha já desbloqueada.
 
 Tudo é calculado a partir do histórico de tarefas, então computador e celular mostram sempre o mesmo progresso.

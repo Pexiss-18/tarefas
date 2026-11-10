@@ -39,7 +39,8 @@ Não é um gerenciador de tarefas. É uma folha de caderno de verdade: amassada,
 
 Regras confirmadas pelo dono:
 
-- **Streak (o fogo):** dias seguidos com **mais de 50%** das tarefas feitas. Hoje só conta quando passa de 50% e ainda não conta como quebra.
+- **Mínimo de tarefas:** o dia só conta com **mais de 3 tarefas** (4 ou mais). Com 1 a 3, não soma pontos e quebra o streak, igual ao dia vazio. O número fica em `MIN_TASKS` (`lib/papers.ts`).
+- **Streak (o fogo):** dias seguidos que contam e têm **mais de 50%** das tarefas feitas. Hoje só conta quando passa de 50% e ainda não conta como quebra.
 - **Pontos:** dia com mais de 50% = **+10**, dia com 100% = **+15**.
 - **Quebra:** um dia que não passa de 50% apaga o fogo, queima a folha e **volta uma folha**. **Dia sem nenhuma tarefa também quebra.**
 - **Reacender:** fazer mais da metade de novo reacende o fogo e a queimadura some.

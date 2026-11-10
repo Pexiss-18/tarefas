@@ -84,7 +84,15 @@ export default function CalendarSlip({ paper, tasks, today, brokeOn, onToggle, o
                   disabled={future}
                   onClick={() => setSelected(d === selected ? null : d)}
                   aria-label={`${parseDateStr(d).getDate()}: ${
-                    r === "full" ? "tudo feito" : r === "half" ? "mais da metade" : r === "fail" ? "menos da metade" : "sem tarefas"
+                    r === "full"
+                      ? "tudo feito"
+                      : r === "half"
+                        ? "mais da metade"
+                        : r === "fail"
+                          ? "menos da metade"
+                          : r === "few"
+                            ? "menos de 4 tarefas"
+                            : "sem tarefas"
                   }`}
                   aria-pressed={d === selected}
                 >
@@ -98,8 +106,8 @@ export default function CalendarSlip({ paper, tasks, today, brokeOn, onToggle, o
                     </span>
                   )}
                   {r === "half" && <Tick className="mark" />}
-                  {r === "fail" && d !== today && <Cross className="mark" />}
-                  {d === brokeOn && r !== "fail" && <Cross className="mark" />}
+                  {(r === "fail" || r === "few") && d !== today && <Cross className="mark" />}
+                  {d === brokeOn && r !== "fail" && r !== "few" && <Cross className="mark" />}
                 </button>
               );
             })}

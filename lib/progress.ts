@@ -1,10 +1,11 @@
 import type { Task } from "./types";
 import { addDays } from "./date";
-import { PAPERS, XP_FULL, XP_HALF, levelFor } from "./papers";
+import { MIN_TASKS, PAPERS, XP_FULL, XP_HALF, levelFor } from "./papers";
 
 export type DayStat = { total: number; done: number };
 
-export type DayResult = "full" | "half" | "fail" | "empty";
+/** few = teve tarefas, mas menos que MIN_TASKS: não conta, igual a um dia fraco. */
+export type DayResult = "full" | "half" | "fail" | "few" | "empty";
 
 export type Progress = {
   xp: number;
@@ -34,6 +35,7 @@ export function dayStats(tasks: Task[]): Map<string, DayStat> {
 
 export function resultOf(s: DayStat | undefined): DayResult {
   if (!s || s.total === 0) return "empty";
+  if (s.total < MIN_TASKS) return "few";
   if (s.done === s.total) return "full";
   if (s.done / s.total > 0.5) return "half";
   return "fail";
@@ -43,8 +45,10 @@ const gainOf = (r: DayResult) => (r === "full" ? XP_FULL : r === "half" ? XP_HAL
 
 /**
  * Reproduz o histórico dia a dia:
- * - dia com mais de 50% concluído: streak +1 e +10 pontos (100%: +15);
- * - dia abaixo disso (ou sem tarefas) com streak ativo: o fogo apaga,
+ * - dia com MIN_TASKS (4) ou mais tarefas e mais de 50% concluído: streak +1 e
+ *   +10 pontos (100%: +15);
+ * - dia abaixo disso (menos de 4 tarefas, metade ou menos, ou sem tarefas) com
+ *   streak ativo: o fogo apaga,
  *   a folha queima e você volta para o estilo anterior;
  * - hoje só soma quando já passou de 50% — ainda não conta como quebra.
  */

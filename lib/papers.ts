@@ -29,4 +29,6 @@ export function levelFor(xp: number): number {
 }
 
 export const XP_HALF = 10;
+/** O dia só conta (pontos e fogo) com pelo menos esta quantidade de tarefas. */
+export const MIN_TASKS = 4;
 export const XP_FULL = 15;
