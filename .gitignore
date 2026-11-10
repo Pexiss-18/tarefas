@@ -1,0 +1,19 @@
+node_modules
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
+
+# dados locais da versão antiga (servidor próprio) — hoje tudo fica no Firebase
+data/
+
+# arquivos pessoais e de outras ferramentas que não pertencem ao app
+historico-conversa.md
+portfolio/
+.gemini/
+.claude/settings.local.json
+
+# pastas de trabalho do Impeccable (capturas e perguntas em andamento)
+.impeccable/review/
+.impeccable/questions/
+.impeccable/hook.cache.json

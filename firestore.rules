@@ -1,0 +1,57 @@
+rules_version = '2';
+
+// Regras de segurança do projeto Firebase "px-financeiro", que hoje atende
+// dois apps: o px_financeiro e o Tarefas.
+//
+// ATENÇÃO: as regras valem para o projeto inteiro. Ao publicar no console,
+// cole ESTE arquivo completo. Colar só um dos blocos apaga o outro, e o app
+// que ficar de fora para de funcionar.
+//
+// Como aplicar: console do Firebase → Firestore Database → Regras → cole →
+// Publicar.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── px_financeiro ───────────────────────────────────────────────────
+    // Cada usuário só lê e escreve o PRÓPRIO documento (users/{uid}), que
+    // chega criptografado de ponta a ponta pelo app.
+    match /users/{uid} {
+      function isOwner() {
+        return request.auth != null && request.auth.uid == uid;
+      }
+
+      allow read, delete: if isOwner();
+
+      // Na escrita, aceita apenas os campos esperados, com o envelope
+      // limitado a ~900 KB (o Firestore impõe 1 MiB por documento).
+      allow create, update: if isOwner()
+        && request.resource.data.keys().hasOnly(['envelope', 'updatedAt'])
+        && request.resource.data.envelope is string
+        && request.resource.data.envelope.size() < 900000
+        && request.resource.data.updatedAt is number;
+    }
+
+    // ── Tarefas ─────────────────────────────────────────────────────────
+    // Cada usuário só lê e escreve as próprias tarefas: tarefas/{uid}/tasks/{id}.
+    match /tarefas/{uid}/tasks/{taskId} {
+      function isOwner() {
+        return request.auth != null && request.auth.uid == uid;
+      }
+
+      function isValidTask(data) {
+        return data.keys().hasOnly(['title', 'done', 'date', 'createdAt'])
+          && data.title is string
+          && data.title.size() > 0
+          && data.title.size() <= 140
+          && data.done is bool
+          && data.date is string
+          && data.date.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+          && data.createdAt is string
+          && data.createdAt.size() <= 40;
+      }
+
+      allow read, delete: if isOwner();
+      allow create, update: if isOwner() && isValidTask(request.resource.data);
+    }
+  }
+}

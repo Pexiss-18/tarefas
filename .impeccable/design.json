@@ -1,0 +1,1039 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-10T21:14:08.510Z",
+  "title": "Design System: Tarefas",
+  "extensions": {
+    "colorMeta": {
+      "bic-azul": {
+        "role": "primary",
+        "displayName": "Bic Azul",
+        "canonical": "#24399a",
+        "tonalRamp": [
+          "oklch(15.0% 0.083 268.4)",
+          "oklch(26.0% 0.115 268.4)",
+          "oklch(37.0% 0.147 268.4)",
+          "oklch(48.0% 0.160 268.4)",
+          "oklch(60.0% 0.160 268.4)",
+          "oklch(72.0% 0.150 268.4)",
+          "oklch(84.0% 0.115 268.4)",
+          "oklch(95.0% 0.083 268.4)"
+        ]
+      },
+      "bic-azul-soft": {
+        "role": "primary",
+        "displayName": "Bic Azul Fraca",
+        "canonical": "#46559e",
+        "tonalRamp": [
+          "oklch(15.0% 0.062 272.4)",
+          "oklch(26.0% 0.086 272.4)",
+          "oklch(37.0% 0.109 272.4)",
+          "oklch(48.0% 0.119 272.4)",
+          "oklch(60.0% 0.119 272.4)",
+          "oklch(72.0% 0.112 272.4)",
+          "oklch(84.0% 0.086 272.4)",
+          "oklch(95.0% 0.062 272.4)"
+        ]
+      },
+      "desk": {
+        "role": "neutral",
+        "displayName": "Mesa",
+        "canonical": "#2b2724",
+        "tonalRamp": [
+          "oklch(15.0% 0.004 59.3)",
+          "oklch(26.0% 0.006 59.3)",
+          "oklch(37.0% 0.007 59.3)",
+          "oklch(48.0% 0.008 59.3)",
+          "oklch(60.0% 0.008 59.3)",
+          "oklch(72.0% 0.008 59.3)",
+          "oklch(84.0% 0.006 59.3)",
+          "oklch(95.0% 0.004 59.3)"
+        ]
+      },
+      "amassada-paper": {
+        "role": "neutral",
+        "displayName": "Papel Amassado",
+        "canonical": "#e6e1d3",
+        "tonalRamp": [
+          "oklch(15.0% 0.010 90.6)",
+          "oklch(26.0% 0.014 90.6)",
+          "oklch(37.0% 0.018 90.6)",
+          "oklch(48.0% 0.020 90.6)",
+          "oklch(60.0% 0.020 90.6)",
+          "oklch(72.0% 0.018 90.6)",
+          "oklch(84.0% 0.014 90.6)",
+          "oklch(95.0% 0.010 90.6)"
+        ]
+      },
+      "amassada-line": {
+        "role": "neutral",
+        "displayName": "Pauta da Amassada",
+        "canonical": "#a7b6c6",
+        "tonalRamp": [
+          "oklch(15.0% 0.015 249.9)",
+          "oklch(26.0% 0.020 249.9)",
+          "oklch(37.0% 0.026 249.9)",
+          "oklch(48.0% 0.028 249.9)",
+          "oklch(60.0% 0.028 249.9)",
+          "oklch(72.0% 0.027 249.9)",
+          "oklch(84.0% 0.020 249.9)",
+          "oklch(95.0% 0.015 249.9)"
+        ]
+      },
+      "amassada-margin": {
+        "role": "neutral",
+        "displayName": "Margem da Amassada",
+        "canonical": "#d49393",
+        "tonalRamp": [
+          "oklch(15.0% 0.041 19.2)",
+          "oklch(26.0% 0.057 19.2)",
+          "oklch(37.0% 0.073 19.2)",
+          "oklch(48.0% 0.079 19.2)",
+          "oklch(60.0% 0.079 19.2)",
+          "oklch(72.0% 0.074 19.2)",
+          "oklch(84.0% 0.057 19.2)",
+          "oklch(95.0% 0.041 19.2)"
+        ]
+      },
+      "fichario-paper": {
+        "role": "neutral",
+        "displayName": "Papel de Fichário",
+        "canonical": "#f1f0ea",
+        "tonalRamp": [
+          "oklch(15.0% 0.004 98.9)",
+          "oklch(26.0% 0.006 98.9)",
+          "oklch(37.0% 0.007 98.9)",
+          "oklch(48.0% 0.008 98.9)",
+          "oklch(60.0% 0.008 98.9)",
+          "oklch(72.0% 0.008 98.9)",
+          "oklch(84.0% 0.006 98.9)",
+          "oklch(95.0% 0.004 98.9)"
+        ]
+      },
+      "fichario-ink": {
+        "role": "secondary",
+        "displayName": "Bic Preta",
+        "canonical": "#1f2026",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 278.0)",
+          "oklch(26.0% 0.008 278.0)",
+          "oklch(37.0% 0.011 278.0)",
+          "oklch(48.0% 0.011 278.0)",
+          "oklch(60.0% 0.011 278.0)",
+          "oklch(72.0% 0.011 278.0)",
+          "oklch(84.0% 0.008 278.0)",
+          "oklch(95.0% 0.006 278.0)"
+        ]
+      },
+      "fichario-ink-soft": {
+        "role": "secondary",
+        "displayName": "Bic Preta Fraca",
+        "canonical": "#4a4c57",
+        "tonalRamp": [
+          "oklch(15.0% 0.010 277.4)",
+          "oklch(26.0% 0.013 277.4)",
+          "oklch(37.0% 0.017 277.4)",
+          "oklch(48.0% 0.018 277.4)",
+          "oklch(60.0% 0.018 277.4)",
+          "oklch(72.0% 0.017 277.4)",
+          "oklch(84.0% 0.013 277.4)",
+          "oklch(95.0% 0.010 277.4)"
+        ]
+      },
+      "fichario-line": {
+        "role": "neutral",
+        "displayName": "Pauta do Fichário",
+        "canonical": "#a6bdd6",
+        "tonalRamp": [
+          "oklch(15.0% 0.023 250.6)",
+          "oklch(26.0% 0.032 250.6)",
+          "oklch(37.0% 0.040 250.6)",
+          "oklch(48.0% 0.044 250.6)",
+          "oklch(60.0% 0.044 250.6)",
+          "oklch(72.0% 0.041 250.6)",
+          "oklch(84.0% 0.032 250.6)",
+          "oklch(95.0% 0.023 250.6)"
+        ]
+      },
+      "fichario-margin": {
+        "role": "neutral",
+        "displayName": "Margem do Fichário",
+        "canonical": "#e08a8a",
+        "tonalRamp": [
+          "oklch(15.0% 0.055 20.0)",
+          "oklch(26.0% 0.076 20.0)",
+          "oklch(37.0% 0.097 20.0)",
+          "oklch(48.0% 0.106 20.0)",
+          "oklch(60.0% 0.106 20.0)",
+          "oklch(72.0% 0.099 20.0)",
+          "oklch(84.0% 0.076 20.0)",
+          "oklch(95.0% 0.055 20.0)"
+        ]
+      },
+      "caderno-paper": {
+        "role": "neutral",
+        "displayName": "Papel de Caderno Novo",
+        "canonical": "#fbfbf7",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 106.5)",
+          "oklch(26.0% 0.004 106.5)",
+          "oklch(37.0% 0.005 106.5)",
+          "oklch(48.0% 0.005 106.5)",
+          "oklch(60.0% 0.005 106.5)",
+          "oklch(72.0% 0.005 106.5)",
+          "oklch(84.0% 0.004 106.5)",
+          "oklch(95.0% 0.003 106.5)"
+        ]
+      },
+      "caderno-ink": {
+        "role": "secondary",
+        "displayName": "Gel Preta",
+        "canonical": "#15171d",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 270.8)",
+          "oklch(26.0% 0.009 270.8)",
+          "oklch(37.0% 0.011 270.8)",
+          "oklch(48.0% 0.012 270.8)",
+          "oklch(60.0% 0.012 270.8)",
+          "oklch(72.0% 0.012 270.8)",
+          "oklch(84.0% 0.009 270.8)",
+          "oklch(95.0% 0.006 270.8)"
+        ]
+      },
+      "caderno-ink-soft": {
+        "role": "secondary",
+        "displayName": "Gel Preta Fraca",
+        "canonical": "#474b57",
+        "tonalRamp": [
+          "oklch(15.0% 0.011 270.9)",
+          "oklch(26.0% 0.015 270.9)",
+          "oklch(37.0% 0.019 270.9)",
+          "oklch(48.0% 0.021 270.9)",
+          "oklch(60.0% 0.021 270.9)",
+          "oklch(72.0% 0.019 270.9)",
+          "oklch(84.0% 0.015 270.9)",
+          "oklch(95.0% 0.011 270.9)"
+        ]
+      },
+      "caderno-line": {
+        "role": "neutral",
+        "displayName": "Pauta do Caderno",
+        "canonical": "#8fb2df",
+        "tonalRamp": [
+          "oklch(15.0% 0.040 254.9)",
+          "oklch(26.0% 0.055 254.9)",
+          "oklch(37.0% 0.070 254.9)",
+          "oklch(48.0% 0.076 254.9)",
+          "oklch(60.0% 0.076 254.9)",
+          "oklch(72.0% 0.071 254.9)",
+          "oklch(84.0% 0.055 254.9)",
+          "oklch(95.0% 0.040 254.9)"
+        ]
+      },
+      "caderno-margin": {
+        "role": "neutral",
+        "displayName": "Margem do Caderno",
+        "canonical": "#e2777a",
+        "tonalRamp": [
+          "oklch(15.0% 0.069 19.4)",
+          "oklch(26.0% 0.096 19.4)",
+          "oklch(37.0% 0.123 19.4)",
+          "oklch(48.0% 0.133 19.4)",
+          "oklch(60.0% 0.133 19.4)",
+          "oklch(72.0% 0.125 19.4)",
+          "oklch(84.0% 0.096 19.4)",
+          "oklch(95.0% 0.069 19.4)"
+        ]
+      },
+      "marca-texto": {
+        "role": "secondary",
+        "displayName": "Marca-texto Amarelo",
+        "canonical": "#ffe04a",
+        "tonalRamp": [
+          "oklch(15.0% 0.086 97.2)",
+          "oklch(26.0% 0.119 97.2)",
+          "oklch(37.0% 0.151 97.2)",
+          "oklch(48.0% 0.164 97.2)",
+          "oklch(60.0% 0.164 97.2)",
+          "oklch(72.0% 0.154 97.2)",
+          "oklch(84.0% 0.119 97.2)",
+          "oklch(95.0% 0.086 97.2)"
+        ]
+      },
+      "kraft-paper": {
+        "role": "neutral",
+        "displayName": "Papel Kraft",
+        "canonical": "#bd9465",
+        "tonalRamp": [
+          "oklch(15.0% 0.042 69.7)",
+          "oklch(26.0% 0.058 69.7)",
+          "oklch(37.0% 0.074 69.7)",
+          "oklch(48.0% 0.080 69.7)",
+          "oklch(60.0% 0.080 69.7)",
+          "oklch(72.0% 0.075 69.7)",
+          "oklch(84.0% 0.058 69.7)",
+          "oklch(95.0% 0.042 69.7)"
+        ]
+      },
+      "kraft-ink": {
+        "role": "secondary",
+        "displayName": "Marcador",
+        "canonical": "#1d140c",
+        "tonalRamp": [
+          "oklch(15.0% 0.011 62.8)",
+          "oklch(26.0% 0.015 62.8)",
+          "oklch(37.0% 0.019 62.8)",
+          "oklch(48.0% 0.021 62.8)",
+          "oklch(60.0% 0.021 62.8)",
+          "oklch(72.0% 0.020 62.8)",
+          "oklch(84.0% 0.015 62.8)",
+          "oklch(95.0% 0.011 62.8)"
+        ]
+      },
+      "kraft-ink-soft": {
+        "role": "secondary",
+        "displayName": "Marcador Fraco",
+        "canonical": "#3b2814",
+        "tonalRamp": [
+          "oklch(15.0% 0.022 66.2)",
+          "oklch(26.0% 0.031 66.2)",
+          "oklch(37.0% 0.040 66.2)",
+          "oklch(48.0% 0.043 66.2)",
+          "oklch(60.0% 0.043 66.2)",
+          "oklch(72.0% 0.040 66.2)",
+          "oklch(84.0% 0.031 66.2)",
+          "oklch(95.0% 0.022 66.2)"
+        ]
+      },
+      "kraft-line": {
+        "role": "neutral",
+        "displayName": "Pauta do Kraft",
+        "canonical": "rgb(78 48 18 / 0.3)",
+        "tonalRamp": [
+          "oklch(15.0% 0.032 62.9)",
+          "oklch(26.0% 0.044 62.9)",
+          "oklch(37.0% 0.057 62.9)",
+          "oklch(48.0% 0.061 62.9)",
+          "oklch(60.0% 0.061 62.9)",
+          "oklch(72.0% 0.058 62.9)",
+          "oklch(84.0% 0.044 62.9)",
+          "oklch(95.0% 0.032 62.9)"
+        ]
+      },
+      "gel-branca": {
+        "role": "secondary",
+        "displayName": "Gel Branca",
+        "canonical": "#fffaf0",
+        "tonalRamp": [
+          "oklch(15.0% 0.007 84.6)",
+          "oklch(26.0% 0.010 84.6)",
+          "oklch(37.0% 0.013 84.6)",
+          "oklch(48.0% 0.014 84.6)",
+          "oklch(60.0% 0.014 84.6)",
+          "oklch(72.0% 0.013 84.6)",
+          "oklch(84.0% 0.010 84.6)",
+          "oklch(95.0% 0.007 84.6)"
+        ]
+      },
+      "engenharia-paper": {
+        "role": "neutral",
+        "displayName": "Papel de Engenharia",
+        "canonical": "#e1ebd3",
+        "tonalRamp": [
+          "oklch(15.0% 0.018 125.6)",
+          "oklch(26.0% 0.024 125.6)",
+          "oklch(37.0% 0.031 125.6)",
+          "oklch(48.0% 0.034 125.6)",
+          "oklch(60.0% 0.034 125.6)",
+          "oklch(72.0% 0.032 125.6)",
+          "oklch(84.0% 0.024 125.6)",
+          "oklch(95.0% 0.018 125.6)"
+        ]
+      },
+      "engenharia-ink": {
+        "role": "secondary",
+        "displayName": "Lapiseira",
+        "canonical": "#33373b",
+        "tonalRamp": [
+          "oklch(15.0% 0.005 248.1)",
+          "oklch(26.0% 0.006 248.1)",
+          "oklch(37.0% 0.008 248.1)",
+          "oklch(48.0% 0.009 248.1)",
+          "oklch(60.0% 0.009 248.1)",
+          "oklch(72.0% 0.008 248.1)",
+          "oklch(84.0% 0.006 248.1)",
+          "oklch(95.0% 0.005 248.1)"
+        ]
+      },
+      "engenharia-ink-soft": {
+        "role": "secondary",
+        "displayName": "Lapiseira Fraca",
+        "canonical": "#4b5156",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 243.1)",
+          "oklch(26.0% 0.008 243.1)",
+          "oklch(37.0% 0.010 243.1)",
+          "oklch(48.0% 0.011 243.1)",
+          "oklch(60.0% 0.011 243.1)",
+          "oklch(72.0% 0.011 243.1)",
+          "oklch(84.0% 0.008 243.1)",
+          "oklch(95.0% 0.006 243.1)"
+        ]
+      },
+      "engenharia-line": {
+        "role": "neutral",
+        "displayName": "Quadriculado Verde",
+        "canonical": "#a6c497",
+        "tonalRamp": [
+          "oklch(15.0% 0.037 135.3)",
+          "oklch(26.0% 0.051 135.3)",
+          "oklch(37.0% 0.065 135.3)",
+          "oklch(48.0% 0.070 135.3)",
+          "oklch(60.0% 0.070 135.3)",
+          "oklch(72.0% 0.066 135.3)",
+          "oklch(84.0% 0.051 135.3)",
+          "oklch(95.0% 0.037 135.3)"
+        ]
+      },
+      "caneta-vermelha": {
+        "role": "secondary",
+        "displayName": "Caneta Vermelha",
+        "canonical": "#c2352b",
+        "tonalRamp": [
+          "oklch(15.0% 0.094 28.6)",
+          "oklch(26.0% 0.130 28.6)",
+          "oklch(37.0% 0.166 28.6)",
+          "oklch(48.0% 0.179 28.6)",
+          "oklch(60.0% 0.179 28.6)",
+          "oklch(72.0% 0.169 28.6)",
+          "oklch(84.0% 0.130 28.6)",
+          "oklch(95.0% 0.094 28.6)"
+        ]
+      },
+      "algodao-paper": {
+        "role": "neutral",
+        "displayName": "Papel de Algodão",
+        "canonical": "#f1f0eb",
+        "tonalRamp": [
+          "oklch(15.0% 0.004 97.4)",
+          "oklch(26.0% 0.005 97.4)",
+          "oklch(37.0% 0.006 97.4)",
+          "oklch(48.0% 0.007 97.4)",
+          "oklch(60.0% 0.007 97.4)",
+          "oklch(72.0% 0.006 97.4)",
+          "oklch(84.0% 0.005 97.4)",
+          "oklch(95.0% 0.004 97.4)"
+        ]
+      },
+      "algodao-ink": {
+        "role": "secondary",
+        "displayName": "Tinteiro Azul-petróleo",
+        "canonical": "#17465a",
+        "tonalRamp": [
+          "oklch(15.0% 0.032 229.8)",
+          "oklch(26.0% 0.044 229.8)",
+          "oklch(37.0% 0.056 229.8)",
+          "oklch(48.0% 0.060 229.8)",
+          "oklch(60.0% 0.060 229.8)",
+          "oklch(72.0% 0.057 229.8)",
+          "oklch(84.0% 0.044 229.8)",
+          "oklch(95.0% 0.032 229.8)"
+        ]
+      },
+      "algodao-ink-soft": {
+        "role": "secondary",
+        "displayName": "Tinteiro Fraco",
+        "canonical": "#3d6475",
+        "tonalRamp": [
+          "oklch(15.0% 0.027 227.6)",
+          "oklch(26.0% 0.037 227.6)",
+          "oklch(37.0% 0.048 227.6)",
+          "oklch(48.0% 0.052 227.6)",
+          "oklch(60.0% 0.052 227.6)",
+          "oklch(72.0% 0.049 227.6)",
+          "oklch(84.0% 0.037 227.6)",
+          "oklch(95.0% 0.027 227.6)"
+        ]
+      },
+      "algodao-line": {
+        "role": "neutral",
+        "displayName": "Pauta do Algodão",
+        "canonical": "rgb(23 70 90 / 0.09)",
+        "tonalRamp": [
+          "oklch(15.0% 0.032 229.8)",
+          "oklch(26.0% 0.044 229.8)",
+          "oklch(37.0% 0.056 229.8)",
+          "oklch(48.0% 0.060 229.8)",
+          "oklch(60.0% 0.060 229.8)",
+          "oklch(72.0% 0.057 229.8)",
+          "oklch(84.0% 0.044 229.8)",
+          "oklch(95.0% 0.032 229.8)"
+        ]
+      },
+      "preto-paper": {
+        "role": "neutral",
+        "displayName": "Caderno Preto",
+        "canonical": "#1c1b1e",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 301.1)",
+          "oklch(26.0% 0.004 301.1)",
+          "oklch(37.0% 0.005 301.1)",
+          "oklch(48.0% 0.006 301.1)",
+          "oklch(60.0% 0.006 301.1)",
+          "oklch(72.0% 0.006 301.1)",
+          "oklch(84.0% 0.004 301.1)",
+          "oklch(95.0% 0.003 301.1)"
+        ]
+      },
+      "gel-dourada": {
+        "role": "secondary",
+        "displayName": "Gel Dourada",
+        "canonical": "#e2c068",
+        "tonalRamp": [
+          "oklch(15.0% 0.060 88.7)",
+          "oklch(26.0% 0.083 88.7)",
+          "oklch(37.0% 0.105 88.7)",
+          "oklch(48.0% 0.114 88.7)",
+          "oklch(60.0% 0.114 88.7)",
+          "oklch(72.0% 0.107 88.7)",
+          "oklch(84.0% 0.083 88.7)",
+          "oklch(95.0% 0.060 88.7)"
+        ]
+      },
+      "gel-dourada-soft": {
+        "role": "secondary",
+        "displayName": "Gel Dourada Fraca",
+        "canonical": "#b9a066",
+        "tonalRamp": [
+          "oklch(15.0% 0.043 87.0)",
+          "oklch(26.0% 0.059 87.0)",
+          "oklch(37.0% 0.075 87.0)",
+          "oklch(48.0% 0.082 87.0)",
+          "oklch(60.0% 0.082 87.0)",
+          "oklch(72.0% 0.077 87.0)",
+          "oklch(84.0% 0.059 87.0)",
+          "oklch(95.0% 0.043 87.0)"
+        ]
+      },
+      "preto-line": {
+        "role": "neutral",
+        "displayName": "Pontilhado Dourado",
+        "canonical": "rgb(226 192 104 / 0.16)",
+        "tonalRamp": [
+          "oklch(15.0% 0.060 88.7)",
+          "oklch(26.0% 0.083 88.7)",
+          "oklch(37.0% 0.105 88.7)",
+          "oklch(48.0% 0.114 88.7)",
+          "oklch(60.0% 0.114 88.7)",
+          "oklch(72.0% 0.107 88.7)",
+          "oklch(84.0% 0.083 88.7)",
+          "oklch(95.0% 0.060 88.7)"
+        ]
+      },
+      "flame-faisca-body": {
+        "role": "tertiary",
+        "displayName": "Faísca (corpo)",
+        "canonical": "#e85a24",
+        "tonalRamp": [
+          "oklch(15.0% 0.098 39.1)",
+          "oklch(26.0% 0.135 39.1)",
+          "oklch(37.0% 0.173 39.1)",
+          "oklch(48.0% 0.187 39.1)",
+          "oklch(60.0% 0.187 39.1)",
+          "oklch(72.0% 0.176 39.1)",
+          "oklch(84.0% 0.135 39.1)",
+          "oklch(95.0% 0.098 39.1)"
+        ]
+      },
+      "flame-faisca-core": {
+        "role": "tertiary",
+        "displayName": "Faísca (miolo)",
+        "canonical": "#ffb03a",
+        "tonalRamp": [
+          "oklch(15.0% 0.081 72.3)",
+          "oklch(26.0% 0.112 72.3)",
+          "oklch(37.0% 0.143 72.3)",
+          "oklch(48.0% 0.155 72.3)",
+          "oklch(60.0% 0.155 72.3)",
+          "oklch(72.0% 0.146 72.3)",
+          "oklch(84.0% 0.112 72.3)",
+          "oklch(95.0% 0.081 72.3)"
+        ]
+      },
+      "flame-chama-body": {
+        "role": "tertiary",
+        "displayName": "Chama (corpo)",
+        "canonical": "#e0441c",
+        "tonalRamp": [
+          "oklch(15.0% 0.104 34.6)",
+          "oklch(26.0% 0.144 34.6)",
+          "oklch(37.0% 0.184 34.6)",
+          "oklch(48.0% 0.199 34.6)",
+          "oklch(60.0% 0.199 34.6)",
+          "oklch(72.0% 0.187 34.6)",
+          "oklch(84.0% 0.144 34.6)",
+          "oklch(95.0% 0.104 34.6)"
+        ]
+      },
+      "flame-chama-core": {
+        "role": "tertiary",
+        "displayName": "Chama (miolo)",
+        "canonical": "#ff9a2a",
+        "tonalRamp": [
+          "oklch(15.0% 0.087 62.1)",
+          "oklch(26.0% 0.120 62.1)",
+          "oklch(37.0% 0.153 62.1)",
+          "oklch(48.0% 0.166 62.1)",
+          "oklch(60.0% 0.166 62.1)",
+          "oklch(72.0% 0.156 62.1)",
+          "oklch(84.0% 0.120 62.1)",
+          "oklch(95.0% 0.087 62.1)"
+        ]
+      },
+      "flame-fogueira-body": {
+        "role": "tertiary",
+        "displayName": "Fogueira (corpo)",
+        "canonical": "#d9361a",
+        "tonalRamp": [
+          "oklch(15.0% 0.106 32.1)",
+          "oklch(26.0% 0.147 32.1)",
+          "oklch(37.0% 0.188 32.1)",
+          "oklch(48.0% 0.203 32.1)",
+          "oklch(60.0% 0.203 32.1)",
+          "oklch(72.0% 0.191 32.1)",
+          "oklch(84.0% 0.147 32.1)",
+          "oklch(95.0% 0.106 32.1)"
+        ]
+      },
+      "flame-fogueira-core": {
+        "role": "tertiary",
+        "displayName": "Fogueira (miolo)",
+        "canonical": "#5fb4f0",
+        "tonalRamp": [
+          "oklch(15.0% 0.063 241.6)",
+          "oklch(26.0% 0.087 241.6)",
+          "oklch(37.0% 0.111 241.6)",
+          "oklch(48.0% 0.120 241.6)",
+          "oklch(60.0% 0.120 241.6)",
+          "oklch(72.0% 0.113 241.6)",
+          "oklch(84.0% 0.087 241.6)",
+          "oklch(95.0% 0.063 241.6)"
+        ]
+      },
+      "flame-azul-body": {
+        "role": "tertiary",
+        "displayName": "Fogo Azul (corpo)",
+        "canonical": "#2f66d6",
+        "tonalRamp": [
+          "oklch(15.0% 0.095 262.4)",
+          "oklch(26.0% 0.132 262.4)",
+          "oklch(37.0% 0.168 262.4)",
+          "oklch(48.0% 0.182 262.4)",
+          "oklch(60.0% 0.182 262.4)",
+          "oklch(72.0% 0.171 262.4)",
+          "oklch(84.0% 0.132 262.4)",
+          "oklch(95.0% 0.095 262.4)"
+        ]
+      },
+      "flame-azul-core": {
+        "role": "tertiary",
+        "displayName": "Fogo Azul (miolo)",
+        "canonical": "#9cc8ff",
+        "tonalRamp": [
+          "oklch(15.0% 0.048 254.3)",
+          "oklch(26.0% 0.066 254.3)",
+          "oklch(37.0% 0.084 254.3)",
+          "oklch(48.0% 0.091 254.3)",
+          "oklch(60.0% 0.091 254.3)",
+          "oklch(72.0% 0.086 254.3)",
+          "oklch(84.0% 0.066 254.3)",
+          "oklch(95.0% 0.048 254.3)"
+        ]
+      },
+      "flame-mistico-body": {
+        "role": "tertiary",
+        "displayName": "Fogo Místico (corpo)",
+        "canonical": "#6c35cf",
+        "tonalRamp": [
+          "oklch(15.0% 0.115 292.8)",
+          "oklch(26.0% 0.158 292.8)",
+          "oklch(37.0% 0.202 292.8)",
+          "oklch(48.0% 0.219 292.8)",
+          "oklch(60.0% 0.219 292.8)",
+          "oklch(72.0% 0.206 292.8)",
+          "oklch(84.0% 0.158 292.8)",
+          "oklch(95.0% 0.115 292.8)"
+        ]
+      },
+      "flame-mistico-core": {
+        "role": "tertiary",
+        "displayName": "Fogo Místico (miolo)",
+        "canonical": "#d19bff",
+        "tonalRamp": [
+          "oklch(15.0% 0.078 308.1)",
+          "oklch(26.0% 0.107 308.1)",
+          "oklch(37.0% 0.137 308.1)",
+          "oklch(48.0% 0.148 308.1)",
+          "oklch(60.0% 0.148 308.1)",
+          "oklch(72.0% 0.140 308.1)",
+          "oklch(84.0% 0.107 308.1)",
+          "oklch(95.0% 0.078 308.1)"
+        ]
+      },
+      "burn-amarelado": {
+        "role": "tertiary",
+        "displayName": "Amarelado da Queima",
+        "canonical": "#7a4416",
+        "tonalRamp": [
+          "oklch(15.0% 0.049 56.6)",
+          "oklch(26.0% 0.068 56.6)",
+          "oklch(37.0% 0.087 56.6)",
+          "oklch(48.0% 0.094 56.6)",
+          "oklch(60.0% 0.094 56.6)",
+          "oklch(72.0% 0.089 56.6)",
+          "oklch(84.0% 0.068 56.6)",
+          "oklch(95.0% 0.049 56.6)"
+        ]
+      },
+      "burn-tostado": {
+        "role": "tertiary",
+        "displayName": "Tostado",
+        "canonical": "#a8743c",
+        "tonalRamp": [
+          "oklch(15.0% 0.051 66.0)",
+          "oklch(26.0% 0.071 66.0)",
+          "oklch(37.0% 0.090 66.0)",
+          "oklch(48.0% 0.098 66.0)",
+          "oklch(60.0% 0.098 66.0)",
+          "oklch(72.0% 0.092 66.0)",
+          "oklch(84.0% 0.071 66.0)",
+          "oklch(95.0% 0.051 66.0)"
+        ]
+      },
+      "burn-marrom": {
+        "role": "tertiary",
+        "displayName": "Marrom Chamuscado",
+        "canonical": "#6b3a14",
+        "tonalRamp": [
+          "oklch(15.0% 0.045 54.6)",
+          "oklch(26.0% 0.062 54.6)",
+          "oklch(37.0% 0.079 54.6)",
+          "oklch(48.0% 0.085 54.6)",
+          "oklch(60.0% 0.085 54.6)",
+          "oklch(72.0% 0.080 54.6)",
+          "oklch(84.0% 0.062 54.6)",
+          "oklch(95.0% 0.045 54.6)"
+        ]
+      },
+      "burn-fundo": {
+        "role": "tertiary",
+        "displayName": "Fio Queimado",
+        "canonical": "#3a1d0a",
+        "tonalRamp": [
+          "oklch(15.0% 0.028 51.5)",
+          "oklch(26.0% 0.039 51.5)",
+          "oklch(37.0% 0.050 51.5)",
+          "oklch(48.0% 0.054 51.5)",
+          "oklch(60.0% 0.054 51.5)",
+          "oklch(72.0% 0.051 51.5)",
+          "oklch(84.0% 0.039 51.5)",
+          "oklch(95.0% 0.028 51.5)"
+        ]
+      },
+      "burn-carvao": {
+        "role": "tertiary",
+        "displayName": "Carvão",
+        "canonical": "#140a04",
+        "tonalRamp": [
+          "oklch(15.0% 0.012 57.4)",
+          "oklch(26.0% 0.017 57.4)",
+          "oklch(37.0% 0.021 57.4)",
+          "oklch(48.0% 0.023 57.4)",
+          "oklch(60.0% 0.023 57.4)",
+          "oklch(72.0% 0.022 57.4)",
+          "oklch(84.0% 0.017 57.4)",
+          "oklch(95.0% 0.012 57.4)"
+        ]
+      },
+      "cafe": {
+        "role": "tertiary",
+        "displayName": "Anel de Café",
+        "canonical": "#78481c",
+        "tonalRamp": [
+          "oklch(15.0% 0.046 59.8)",
+          "oklch(26.0% 0.063 59.8)",
+          "oklch(37.0% 0.081 59.8)",
+          "oklch(48.0% 0.087 59.8)",
+          "oklch(60.0% 0.087 59.8)",
+          "oklch(72.0% 0.082 59.8)",
+          "oklch(84.0% 0.063 59.8)",
+          "oklch(95.0% 0.046 59.8)"
+        ]
+      },
+      "erro": {
+        "role": "neutral",
+        "displayName": "Vermelho de Erro",
+        "canonical": "#b3261e",
+        "tonalRamp": [
+          "oklch(15.0% 0.093 28.7)",
+          "oklch(26.0% 0.129 28.7)",
+          "oklch(37.0% 0.165 28.7)",
+          "oklch(48.0% 0.178 28.7)",
+          "oklch(60.0% 0.178 28.7)",
+          "oklch(72.0% 0.168 28.7)",
+          "oklch(84.0% 0.129 28.7)",
+          "oklch(95.0% 0.093 28.7)"
+        ]
+      },
+      "scrim": {
+        "role": "neutral",
+        "displayName": "Sombra da Mesa",
+        "canonical": "rgb(20 16 12 / 0.45)",
+        "tonalRamp": [
+          "oklch(15.0% 0.005 67.1)",
+          "oklch(26.0% 0.008 67.1)",
+          "oklch(37.0% 0.010 67.1)",
+          "oklch(48.0% 0.010 67.1)",
+          "oklch(60.0% 0.010 67.1)",
+          "oklch(72.0% 0.010 67.1)",
+          "oklch(84.0% 0.008 67.1)",
+          "oklch(95.0% 0.005 67.1)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Nome 'Tarefas' no login (--fs × 1.75); nome da folha no desbloqueio usa --fs × 1.45."
+      },
+      "headline": {
+        "displayName": "Data",
+        "purpose": "'terça, 10 de novembro' numa linha (--fs × 1.3); encolhe até 80% e cai pra 'terça, 10 nov.'."
+      },
+      "title": {
+        "displayName": "Título do bilhete",
+        "purpose": "'Dias anteriores', 'Suas folhas' (--fs × 1.25)."
+      },
+      "body": {
+        "displayName": "Tarefa",
+        "purpose": "Texto de tarefa e campo de escrever (--fs), altura de linha igual à pauta."
+      },
+      "label": {
+        "displayName": "Status e notas",
+        "purpose": "Status, legendas, pílulas e notas (--fs × 0.72 a 0.78)."
+      },
+      "numeral": {
+        "displayName": "Contador do fogo",
+        "purpose": "'6 dias' sob o fogo (--fs × 0.95, tabular)."
+      },
+      "perPaper": {
+        "displayName": "Letra de cada folha",
+        "purpose": "amassada Caveat 1.62rem; fichário Kalam 1.16rem; caderno Patrick Hand 1.34rem; kraft Gochi Hand 1.36rem; engenharia Architects Daughter 1.12rem; algodão Dancing Script 1.5rem; preto Shadows Into Light 1.3rem. Toda a escala é múltipla de --fs."
+      }
+    },
+    "shadows": [
+      {
+        "name": "folha-na-mesa",
+        "value": "0 2px 4px rgb(0 0 0 / 0.25), 0 24px 60px -12px rgb(0 0 0 / 0.6)",
+        "purpose": "Folha no desktop (a partir de 560px) e cartão de login."
+      },
+      {
+        "name": "bilhete",
+        "value": "0 -10px 40px rgb(0 0 0 / 0.35)",
+        "purpose": "Calendário e coleção subindo do pé."
+      },
+      {
+        "name": "amostra",
+        "value": "0 1px 2px rgb(0 0 0 / 0.2), 0 6px 14px -6px rgb(0 0 0 / 0.35)",
+        "purpose": "Folhas desbloqueadas na coleção."
+      },
+      {
+        "name": "amostra-deitada",
+        "value": "0 0 0 1px color-mix(in srgb, var(--ink) 18%, transparent)",
+        "purpose": "Folha bloqueada, deitada na mesa."
+      },
+      {
+        "name": "aviso",
+        "value": "0 8px 24px rgb(0 0 0 / 0.35)",
+        "purpose": "Toast de 'desfazer'."
+      },
+      {
+        "name": "desbloqueio",
+        "value": "0 20px 60px rgb(0 0 0 / 0.5)",
+        "purpose": "Folha nova que cai na mesa."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-pen",
+        "value": "cubic-bezier(0.3, 0.7, 0.3, 1)",
+        "purpose": "Visto (0.32s), risco (0.42s), marca-texto (0.38s), barra do dia (0.5s)."
+      },
+      {
+        "name": "ease-write",
+        "value": "cubic-bezier(0.4, 0.1, 0.3, 1)",
+        "purpose": "Tarefa nova escrita da esquerda pra direita (0.55s, clip-path)."
+      },
+      {
+        "name": "ease-slip",
+        "value": "cubic-bezier(0.2, 0.9, 0.25, 1)",
+        "purpose": "Bilhete e aviso subindo (0.42s / 0.35s), entram girados 2° e assentam em -0.8°."
+      },
+      {
+        "name": "ease-unlock",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Folha desbloqueada caindo na mesa (0.7s, de 8° e 0.8 de escala)."
+      },
+      {
+        "name": "ease-row",
+        "value": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "purpose": "Linha voltando depois de arrastar (0.25s)."
+      },
+      {
+        "name": "flicker",
+        "value": "1.6s corpo / 1.1s miolo, ease-in-out, alternate",
+        "purpose": "Tremor do fogo; 3.4s quando a meta do dia ainda não foi batida."
+      },
+      {
+        "name": "burn-in",
+        "value": "1.6s ease-out",
+        "purpose": "Queimadura aparecendo."
+      },
+      {
+        "name": "strike-stagger",
+        "value": "0.18s",
+        "purpose": "Atraso entre os traços de cada linha visual do risco."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "estreito",
+        "value": "360px",
+        "purpose": "Placeholder do campo encolhe pra 0.86em."
+      },
+      {
+        "name": "mesa",
+        "value": "560px",
+        "purpose": "A folha vira objeto sobre a mesa: centralizada, até 920px de altura, girada -0.6°, com sombra; bilhetes centralizados."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Linha de tarefa",
+      "kind": "custom",
+      "refersTo": "task-line",
+      "description": "Uma tarefa por pauta: caixinha tremida antes da margem, texto manuscrito na linha, risco ondulado ao marcar.",
+      "html": "<div class=\"ds-sheet\"><div class=\"ds-margin\"></div><div class=\"ds-task\"><button class=\"ds-check\" role=\"checkbox\" aria-checked=\"false\" aria-label=\"Estudar cálculo\"><svg viewBox=\"0 0 28 28\" width=\"26\" height=\"26\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"overflow:visible\"><path d=\"M4 5.2C9.5 3.8 17.6 4.6 23.6 4.1C24.4 10.2 23.3 17.6 24.3 23.8C17.2 24.7 10.1 23.4 4.6 24.4C3.7 17.4 4.7 11.2 4 5.2Z\" stroke-width=\"1.7\"/><path class=\"ds-tick\" pathLength=\"1\" d=\"M7.5 14.8C9.4 16.6 11 18.6 12.6 21.4C15.4 14.2 19.6 7.6 26.5 1.8\" stroke-width=\"2.6\"/></svg></button><span class=\"ds-task-text\">Estudar cálculo</span></div><div class=\"ds-task ds-done\"><button class=\"ds-check\" role=\"checkbox\" aria-checked=\"true\" aria-label=\"Comprar pão\"><svg viewBox=\"0 0 28 28\" width=\"26\" height=\"26\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"overflow:visible\"><path d=\"M4 5.2C9.5 3.8 17.6 4.6 23.6 4.1C24.4 10.2 23.3 17.6 24.3 23.8C17.2 24.7 10.1 23.4 4.6 24.4C3.7 17.4 4.7 11.2 4 5.2Z\" stroke-width=\"1.7\"/><path class=\"ds-tick\" pathLength=\"1\" d=\"M7.5 14.8C9.4 16.6 11 18.6 12.6 21.4C15.4 14.2 19.6 7.6 26.5 1.8\" stroke-width=\"2.6\"/></svg></button><span class=\"ds-task-text\">Comprar pão<svg class=\"ds-strike\" viewBox=\"0 0 120 46\" preserveAspectRatio=\"none\"><path pathLength=\"1\" d=\"M-3 21 Q11 18 22 22 Q33 24 44 20 Q55 17 66 21 Q77 24 88 20 Q99 18 113 21\"/></svg></span></div></div>",
+      "css": ".ds-sheet{--paper:#e6e1d3;--ink:#24399a;--ink-soft:#46559e;--line:#a7b6c6;--margin:#d49393;--accent:#24399a;--fs:1.62rem;--lh:46px;position:relative;background:var(--paper);color:var(--ink);font-family: Caveat, \"Segoe Print\", cursive; font-weight: 400;padding:0 20px 0 0;background-image:repeating-linear-gradient(to bottom,transparent 0 calc(var(--lh) - 1px),var(--line) calc(var(--lh) - 1px) var(--lh));} .ds-margin{position:absolute;top:0;bottom:0;left:52px;border-left:1.5px solid var(--margin);} .ds-task{display:flex;align-items:flex-start;min-height:var(--lh);padding-left:10px;} .ds-check{width:44px;height:var(--lh);display:grid;place-items:center;background:none;border:0;padding:0;color:var(--ink);cursor:pointer;} .ds-check:focus-visible{outline:2px dashed var(--ink-soft);outline-offset:2px;border-radius:4px;} .ds-tick{stroke:var(--accent);stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .32s cubic-bezier(.3,.7,.3,1);} .ds-done .ds-tick{stroke-dashoffset:0;} .ds-task-text{position:relative;padding-left:14px;font-size:var(--fs);line-height:var(--lh);} .ds-done .ds-task-text{color:var(--ink-soft);} .ds-strike{position:absolute;left:14px;top:0;width:calc(100% - 14px);height:100%;overflow:visible;} .ds-strike path{fill:none;stroke:var(--ink);stroke-width:2.1;stroke-linecap:round;vector-effect:non-scaling-stroke;}"
+    },
+    {
+      "name": "Campo de escrever",
+      "kind": "input",
+      "refersTo": "writer",
+      "description": "A linha de baixo da folha: caneta desenhada antes da margem, sem caixa, com os botões de calendário e folhas.",
+      "html": "<form class=\"ds-writer\"><span class=\"ds-writer-pen\"><svg viewBox=\"0 0 32 32\" width=\"28\" height=\"28\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22.5 4.5C24.4 4.9 26.6 7.1 27 8.9L12.2 23.8L6.4 25.6L8 19.6L22.5 4.5Z\"/><path d=\"M19.8 7.4L24.3 11.7M8 19.6C10.4 20.1 11.6 21.4 12.2 23.8\"/></svg></span><input placeholder=\"escrever tarefa…\" aria-label=\"Nova tarefa\"><button type=\"button\" class=\"ds-btn\" aria-label=\"Calendário\"><svg viewBox=\"0 0 32 32\" width=\"28\" height=\"28\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 8.4C12 7.6 20 8.2 27.2 7.8C27.6 14.2 26.8 21 27.4 27C20.4 27.6 12.2 26.9 5.2 27.4C4.6 21 5.4 14.6 5 8.4Z\"/><path d=\"M5.4 13.4C12.4 12.8 20.4 13.6 27 13.1M11 4.6L11.2 10.4M21.2 4.4L21 10.2\"/><path d=\"M10.6 18.4l.2.1M16 18.2l.2.1M21.4 18.3l.2.1M10.7 22.6l.2.1M16.1 22.5l.2.1\" stroke-width=\"2.6\"/></svg></button></form>",
+      "css": ".ds-writer{--paper:#e6e1d3;--ink:#24399a;--ink-soft:#46559e;--line:#a7b6c6;--margin:#d49393;--accent:#24399a;--fs:1.62rem;--lh:46px;position:relative;display:flex;align-items:center;gap:2px;padding:6px 10px 10px;border-top:1.5px solid var(--line);background:var(--paper);color:var(--ink);font-family: Caveat, \"Segoe Print\", cursive; font-weight: 400;} .ds-writer-pen{position:absolute;left:18px;top:8px;color:var(--ink-soft);} .ds-writer input{flex:1;min-width:0;height:var(--lh);padding:0 4px 0 14px;margin-left:44px;border:0;background:none;color:var(--ink);font:inherit;font-size:var(--fs);caret-color:var(--ink);} .ds-writer input::placeholder{color:var(--ink-soft);opacity:.85;} .ds-writer input:focus{outline:none;} .ds-writer input:focus-visible{outline:2px dashed var(--ink-soft);outline-offset:2px;border-radius:4px;} .ds-btn{width:46px;height:46px;display:grid;place-items:center;background:none;border:0;padding:0;color:var(--ink);border-radius:50%;cursor:pointer;} .ds-btn:active{transform:scale(.92);} .ds-btn:focus-visible{outline:2px dashed var(--ink-soft);outline-offset:2px;}"
+    },
+    {
+      "name": "Botão de ícone",
+      "kind": "button",
+      "refersTo": "btn-icon",
+      "description": "Ícone desenhado à mão na tinta da folha; a área de toque de 46px é invisível.",
+      "html": "<div class=\"ds-paper\"><button class=\"ds-btn\" aria-label=\"Calendário\"><svg viewBox=\"0 0 32 32\" width=\"28\" height=\"28\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 8.4C12 7.6 20 8.2 27.2 7.8C27.6 14.2 26.8 21 27.4 27C20.4 27.6 12.2 26.9 5.2 27.4C4.6 21 5.4 14.6 5 8.4Z\"/><path d=\"M5.4 13.4C12.4 12.8 20.4 13.6 27 13.1M11 4.6L11.2 10.4M21.2 4.4L21 10.2\"/><path d=\"M10.6 18.4l.2.1M16 18.2l.2.1M21.4 18.3l.2.1M10.7 22.6l.2.1M16.1 22.5l.2.1\" stroke-width=\"2.6\"/></svg></button><button class=\"ds-btn\" aria-label=\"Escrever\"><svg viewBox=\"0 0 32 32\" width=\"28\" height=\"28\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22.5 4.5C24.4 4.9 26.6 7.1 27 8.9L12.2 23.8L6.4 25.6L8 19.6L22.5 4.5Z\"/><path d=\"M19.8 7.4L24.3 11.7M8 19.6C10.4 20.1 11.6 21.4 12.2 23.8\"/></svg></button></div>",
+      "css": ".ds-paper{--paper:#e6e1d3;--ink:#24399a;--ink-soft:#46559e;--line:#a7b6c6;--margin:#d49393;--accent:#24399a;--fs:1.62rem;--lh:46px;display:flex;gap:8px;padding:12px;background:var(--paper);color:var(--ink);} .ds-btn{width:46px;height:46px;display:grid;place-items:center;background:none;border:0;padding:0;color:var(--ink);border-radius:50%;cursor:pointer;transition:transform .1s;} .ds-btn:hover{color:var(--ink-soft);} .ds-btn:active{transform:scale(.92);} .ds-btn:focus-visible{outline:2px dashed var(--ink-soft);outline-offset:2px;}"
+    },
+    {
+      "name": "Pílula",
+      "kind": "button",
+      "refersTo": "pill",
+      "description": "Ação com texto: contorno de caneta com raios desiguais. A variante 'depois' tem borda transparente.",
+      "html": "<div class=\"ds-paper\"><button class=\"ds-pill\">usar agora</button><button class=\"ds-pill ds-pill-ghost\">depois</button></div>",
+      "css": ".ds-paper{--paper:#e6e1d3;--ink:#24399a;--ink-soft:#46559e;--line:#a7b6c6;--margin:#d49393;--accent:#24399a;--fs:1.62rem;--lh:46px;display:flex;gap:18px;padding:16px;background:var(--paper);color:var(--ink);font-family: Caveat, \"Segoe Print\", cursive; font-weight: 400;} .ds-pill{padding:6px 14px;border:1.5px solid var(--ink);border-radius:999px 900px 999px 950px;background:none;color:var(--ink);font:inherit;font-size:calc(var(--fs) * .78);cursor:pointer;} .ds-pill-ghost{border-color:transparent;} .ds-pill:hover{color:var(--ink-soft);} .ds-pill:active{transform:scale(.97);} .ds-pill:focus-visible{outline:2px dashed var(--ink-soft);outline-offset:2px;} .ds-pill:disabled{opacity:.5;}"
+    },
+    {
+      "name": "Bilhete",
+      "kind": "card",
+      "refersTo": "slip",
+      "description": "Pedaço da folha em uso que sobe do pé, torto, sobre a sombra da mesa (calendário, coleção).",
+      "html": "<div class=\"ds-desk\"><section class=\"ds-slip\" role=\"dialog\" aria-label=\"Calendário\"><div class=\"ds-slip-head\"><span class=\"ds-slip-title\">Dias anteriores</span></div><p class=\"ds-note\">Toque num dia pra ver o que foi feito.</p></section></div>",
+      "css": ".ds-desk{background:rgb(20 16 12 / .45);padding:40px 16px 0;} .ds-slip{--paper:#e6e1d3;--ink:#24399a;--ink-soft:#46559e;--line:#a7b6c6;--margin:#d49393;--accent:#24399a;--fs:1.62rem;--lh:46px;background:var(--paper);color:var(--ink);font-family: Caveat, \"Segoe Print\", cursive; font-weight: 400;border-radius:4px 4px 0 0;box-shadow:0 -10px 40px rgb(0 0 0 / .35);transform:rotate(-.8deg);padding:14px 20px 22px;max-width:460px;} .ds-slip-title{font-size:calc(var(--fs) * 1.25);} .ds-note{font-size:calc(var(--fs) * .74);color:var(--ink-soft);line-height:1.35;margin:4px 0 0;}"
+    },
+    {
+      "name": "Amostra de folha",
+      "kind": "card",
+      "refersTo": "swatch",
+      "description": "Cada folha da coleção é a própria folha, levantada da mesa; bloqueada, fica deitada e meio apagada.",
+      "html": "<div class=\"ds-list\"><button class=\"ds-swatch\" style=\"--paper:#f1f0ea;--ink:#1f2026;--ink-soft:#4a4c57;font-family:Kalam,cursive;--fs:1.16rem\"><span><span class=\"ds-swatch-name\">Folha de fichário</span><br><span class=\"ds-swatch-pen\">Bic preta</span></span><span class=\"ds-swatch-tag\">em uso</span></button><button class=\"ds-swatch ds-locked\" disabled style=\"--paper:#bd9465;--ink:#1d140c;--ink-soft:#3b2814;font-family:'Gochi Hand',cursive;--fs:1.36rem\"><span><span class=\"ds-swatch-name\">Papel kraft</span><br><span class=\"ds-swatch-pen\">Marcador + gel branca</span></span><span class=\"ds-swatch-tag\">faltam 75 pts</span></button></div>",
+      "css": ".ds-list{display:grid;gap:14px;padding:16px;background:#e6e1d3;} .ds-swatch{display:flex;align-items:center;gap:12px;width:100%;min-height:92px;padding:14px 16px;text-align:left;border:0;border-radius:2px;background:var(--paper);color:var(--ink);font-weight:400;box-shadow:0 1px 2px rgb(0 0 0 / .2),0 6px 14px -6px rgb(0 0 0 / .35);transform:rotate(.5deg);cursor:pointer;} .ds-swatch:nth-child(even){transform:rotate(-.6deg);} .ds-swatch:focus-visible{outline:2px dashed var(--ink-soft);outline-offset:2px;} .ds-locked{cursor:default;box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 18%,transparent);filter:grayscale(.45);} .ds-swatch-name{font-size:calc(var(--fs) * .95);} .ds-swatch-pen{font-size:calc(var(--fs) * .7);color:var(--ink-soft);} .ds-swatch-tag{margin-left:auto;font-size:calc(var(--fs) * .68);color:var(--ink-soft);}"
+    },
+    {
+      "name": "Aviso",
+      "kind": "custom",
+      "refersTo": "toast",
+      "description": "Tira de papel torta com a ação 'desfazer' sublinhada.",
+      "html": "<div class=\"ds-toast\" role=\"status\"><span>Tarefa apagada.</span><button>desfazer</button></div>",
+      "css": ".ds-toast{--paper:#e6e1d3;--ink:#24399a;--ink-soft:#46559e;--line:#a7b6c6;--margin:#d49393;--accent:#24399a;--fs:1.62rem;--lh:46px;display:inline-flex;align-items:center;gap:14px;padding:10px 16px;background:var(--paper);color:var(--ink);font-family: Caveat, \"Segoe Print\", cursive; font-weight: 400;font-size:calc(var(--fs) * .8);box-shadow:0 8px 24px rgb(0 0 0 / .35);transform:rotate(-1deg);margin:16px;} .ds-toast button{background:none;border:0;color:var(--ink);font:inherit;text-decoration:underline;text-underline-offset:4px;padding:6px 0;cursor:pointer;} .ds-toast button:hover{color:var(--ink-soft);} .ds-toast button:focus-visible{outline:2px dashed var(--ink-soft);outline-offset:2px;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Folha do Dia",
+    "overview": "Tudo o que aparece na tela é uma folha de papel de verdade, deitada numa mesa escura, escrita à mão com uma caneta só. Não há interface por cima do papel: a pauta é a grade, a margem vermelha é o alinhamento, a caneta é a cor do texto e dos ícones, e o estado do sistema aparece no próprio material. A folha melhora conforme o dono cumpre o que escreveu (amassada, fichário, caderno novo, kraft, engenharia, algodão, caderno preto) e queima quando ele larga.\n\nA densidade é a de um caderno: uma tarefa por linha de pauta de 46px, texto grande e manuscrito, muito papel em branco. Cada folha é um mundo fechado com sua própria cor de papel, pauta, margem, tinta e letra, todos trocados juntos por `data-paper`. Os desenhos (caixinhas, risco, fogo, ícones, anel do dia no calendário) são traços SVG tremidos em `currentColor`, gerados de forma determinística, pra o mesmo desenho sair igual no servidor e no cliente.\n\nO movimento imita a mão: o texto novo aparece da esquerda pra direita como se fosse escrito, o risco é desenhado em 0,42s, o visto em 0,32s, o fogo tremula devagar. Bilhetes (calendário, coleção de folhas) sobem como papel solto, levemente tortos. `prefers-reduced-motion` desliga tudo.",
+    "keyCharacteristics": [
+      "Uma folha, uma caneta, uma letra manuscrita por mundo; nunca misturadas.",
+      "Pauta de 46px como grade única; todo texto de tarefa cai na linha.",
+      "Margem a 52px; o texto começa a 68px.",
+      "Desenho à mão em SVG, traço irregular, sempre na tinta da folha.",
+      "Nenhum texto em negrito.",
+      "Profundidade só de papel sobre a mesa."
+    ],
+    "rules": [
+      {
+        "name": "A Regra de Uma Caneta por Folha",
+        "body": "Cada folha tem exatamente uma tinta principal, uma versão fraca e no máximo uma caneta de destaque. Uma tela nova herda as variáveis da folha (`--ink`, `--ink-soft`, `--accent`, `--line`, `--margin`, `--paper`) e nunca escreve cor fixa.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Fogo Sem Brasa",
+        "body": "O laranja pertence só ao fogo do streak. A folha queimada é tostado, marrom e carvão; nada de brasa, borda laranja ou brilho.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Bic",
+        "body": "Bic não escreve em negrito: todo texto tem peso 400. A ênfase vem da tinta (`--ink` contra `--ink-soft`), nunca do peso. `<strong>` herda o peso e só troca para a tinta forte.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Pauta",
+        "body": "O texto de tarefa sempre tem altura de linha igual à pauta (`--lh`), pra cada linha visual cair numa linha do papel e o risco ter onde passar.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Pauta Reta",
+        "body": "A pauta e a margem são retas e contínuas mesmo sobre os vincos da folha amassada. É uma adaptação aceita: legibilidade da linha antes da física do papel.",
+        "section": "layout"
+      },
+      {
+        "name": "A Regra da Folha Deitada",
+        "body": "Só papel levantado tem sombra. Uma folha bloqueada fica deitada na mesa: sem sombra, só um fio de 1px na tinta a 18% e cor meio apagada (`grayscale(0.45)`), com o texto em contraste total.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do ler toda cor, letra e tamanho das variáveis da folha (`--paper`, `--ink`, `--ink-soft`, `--accent`, `--line`, `--margin`, `--font`, `--fs`).",
+      "Do alinhar o texto de tarefa à pauta de 46px, com margem a 52px e texto a 68px.",
+      "Do desenhar todo ícone e marca como SVG tremido em `currentColor`, com pontas redondas e semente determinística.",
+      "Do dar sombra só ao papel levantado da mesa e girar levemente o papel solto (-0.6° a -1.5°).",
+      "Do manter a pauta e a margem retas sobre os vincos.",
+      "Do usar a forma simplificada do fogo abaixo de 24px.",
+      "Do manter toques de 44px ou mais e foco em tracejado de 2px na tinta fraca."
+    ],
+    "donts": [
+      "Don't usar negrito em nenhum texto: peso 400 sempre (Bic não escreve em negrito).",
+      "Don't usar ícone de sistema, emoji, checkbox nativo, barra de progresso de app, card arredondado ou badge de gamificação.",
+      "Don't pôr laranja, brasa ou brilho na folha queimada; o laranja é só do fogo.",
+      "Don't misturar duas letras ou duas tintas principais na mesma folha.",
+      "Don't cobrir o que foi escrito com controles; o conteúdo recua da beirada queimada em vez de ficar sob ela.",
+      "Don't editar `public/tex/amassada.svg` à mão; regenerar pelo script."
+    ]
+  }
+}

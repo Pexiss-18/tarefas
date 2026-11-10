@@ -1,0 +1,991 @@
+@import "tailwindcss";
+
+/* ───────────────────────── Texturas (SVG gerado, sem imagens externas) ───────────────────────── */
+:root {
+  /* um vinco só, de folha que foi dobrada uma vez */
+  --tex-soft: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='1100'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.003 0.004' numOctaves='3' seed='3'/%3E%3CfeDiffuseLighting lighting-color='%23fff' surfaceScale='1.6' diffuseConstant='1.04'%3E%3CfeDistantLight azimuth='225' elevation='70'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
+  /* grão fino */
+  --tex-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.25 0 0 0 0 0.2 0 0 0 0 0.15 0 0 0 0.16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  /* fibras longas (kraft, algodão) */
+  --tex-fiber: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.03 0.14' numOctaves='3' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.22 0 0 0 0 0.14 0 0 0 0 0.06 0 0 0 0.3 -0.08'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+
+  /* algodão: flocos curtos em todas as direções */
+  --tex-cotton: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.07' numOctaves='4' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.3 0 0 0 0 0.3 0 0 0 0 0.28 0 0 0 0.5 -0.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+
+  --desk: #2b2724;
+  --lh: 46px;
+}
+
+/* ───────────────────────── Folhas e canetas ───────────────────────── */
+[data-paper="amassada"] {
+  --paper: #e6e1d3;
+  --ink: #24399a;
+  --ink-soft: #46559e;
+  --line: #a7b6c6;
+  --margin: #d49393;
+  --accent: #24399a;
+  --mark: transparent;
+  --font: var(--f-caveat);
+  --fs: 1.62rem;
+  /* vincos de folha amassada e alisada + anel de café (gerado em public/tex) */
+  /* o caminho inclui o basePath do GitHub Pages (next.config.mjs) */
+  --tex: var(--tex-grain), url("/tarefas/tex/amassada.svg");
+}
+[data-paper="fichario"] {
+  --paper: #f1f0ea;
+  --ink: #1f2026;
+  --ink-soft: #4a4c57;
+  --line: #a6bdd6;
+  --margin: #e08a8a;
+  --accent: #1f2026;
+  --mark: transparent;
+  --font: var(--f-kalam);
+  --fs: 1.16rem;
+  --tex:
+    radial-gradient(ellipse at 50% 45%, transparent 60%, rgb(120 110 80 / 0.12) 100%),
+    var(--tex-grain), var(--tex-soft);
+}
+[data-paper="caderno"] {
+  --paper: #fbfbf7;
+  --ink: #15171d;
+  --ink-soft: #474b57;
+  --line: #8fb2df;
+  --margin: #e2777a;
+  --accent: #15171d;
+  --mark: #ffe04a;
+  --font: var(--f-patrick);
+  --fs: 1.34rem;
+  --tex: var(--tex-grain);
+}
+[data-paper="kraft"] {
+  --paper: #bd9465;
+  --ink: #1d140c;
+  --ink-soft: #3b2814;
+  --line: rgb(78 48 18 / 0.3);
+  --margin: transparent;
+  --accent: #fffaf0;
+  --mark: transparent;
+  --font: var(--f-gochi);
+  --fs: 1.36rem;
+  --tex:
+    radial-gradient(ellipse at 50% 45%, transparent 55%, rgb(70 40 10 / 0.25) 100%),
+    var(--tex-fiber), var(--tex-grain);
+}
+[data-paper="engenharia"] {
+  --paper: #e1ebd3;
+  --ink: #33373b;
+  --ink-soft: #4b5156;
+  --line: #a6c497;
+  --margin: transparent;
+  --accent: #c2352b;
+  --mark: transparent;
+  --font: var(--f-architects);
+  --fs: 1.12rem;
+  --tex: var(--tex-grain);
+}
+[data-paper="algodao"] {
+  --paper: #f1f0eb;
+  --ink: #17465a;
+  --ink-soft: #3d6475;
+  --line: rgb(23 70 90 / 0.09);
+  --margin: transparent;
+  --accent: #17465a;
+  --mark: transparent;
+  --font: var(--f-dancing);
+  --fs: 1.5rem;
+  --tex: var(--tex-cotton), var(--tex-grain), var(--tex-soft);
+}
+[data-paper="preto"] {
+  --paper: #1c1b1e;
+  --ink: #e2c068;
+  --ink-soft: #b9a066;
+  --line: rgb(226 192 104 / 0.16);
+  --margin: transparent;
+  --accent: #e2c068;
+  --mark: transparent;
+  --font: var(--f-shadows);
+  --fs: 1.3rem;
+  --tex: var(--tex-grain);
+}
+
+/* ───────────────────────── Base ───────────────────────── */
+html,
+body {
+  height: 100%;
+  background: var(--desk);
+  overscroll-behavior: none;
+}
+body {
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+.paper {
+  position: relative;
+  color: var(--ink);
+  background-color: var(--paper);
+  font-family: var(--font), cursive;
+  isolation: isolate;
+  overflow: hidden;
+}
+.paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--tex);
+  background-size: auto, auto, auto, auto, auto, 220px 220px, cover;
+  background-blend-mode: multiply;
+  background-color: var(--paper);
+}
+/* os fios de luz dos vincos precisam de mistura normal (multiply apagaria o branco) */
+[data-paper="amassada"].paper::before {
+  background-size: 220px 220px, cover;
+  background-position: 0 0, center;
+  background-blend-mode: normal;
+}
+[data-paper="fichario"].paper::before {
+  background-size: auto, 220px 220px, cover;
+}
+/* furos de fichário só na folha principal, por cima da pauta (o furo interrompe a linha) */
+.holes {
+  display: none;
+}
+.sheet[data-paper="fichario"] .holes {
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 13px 16%, var(--desk) 5.5px, rgb(0 0 0 / 0.2) 6.5px, transparent 8.5px),
+    radial-gradient(circle at 13px 50%, var(--desk) 5.5px, rgb(0 0 0 / 0.2) 6.5px, transparent 8.5px),
+    radial-gradient(circle at 13px 84%, var(--desk) 5.5px, rgb(0 0 0 / 0.2) 6.5px, transparent 8.5px);
+}
+[data-paper="kraft"].paper::before {
+  background-size: cover, 400px 400px, 220px 220px;
+}
+[data-paper="algodao"].paper::before {
+  background-size: 300px 300px, 220px 220px, cover;
+}
+[data-paper="caderno"].paper::before,
+[data-paper="engenharia"].paper::before,
+[data-paper="preto"].paper::before {
+  background-size: 220px 220px;
+}
+[data-paper="preto"].paper::before {
+  background-blend-mode: screen;
+  opacity: 0.6;
+}
+
+.paper ::selection {
+  background: color-mix(in srgb, var(--ink) 22%, transparent);
+}
+.paper input {
+  caret-color: var(--ink);
+}
+
+/* ───────────────────────── Tela ───────────────────────── */
+.desk {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+}
+.sheet {
+  width: 100%;
+  max-width: 480px;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.6s ease;
+}
+@media (min-width: 560px) {
+  .desk {
+    align-items: center;
+    padding: 24px;
+  }
+  .sheet {
+    height: min(920px, calc(100dvh - 48px));
+    border-radius: 3px;
+    box-shadow:
+      0 2px 4px rgb(0 0 0 / 0.25),
+      0 24px 60px -12px rgb(0 0 0 / 0.6);
+    transform: rotate(-0.6deg);
+  }
+}
+
+.margin-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 52px;
+  width: 0;
+  border-left: 1.5px solid var(--margin);
+  pointer-events: none;
+}
+[data-paper="caderno"] .margin-line {
+  box-shadow: 4px 0 0 -2.5px var(--margin);
+  width: 4px;
+}
+
+.head {
+  padding: calc(env(safe-area-inset-top) + 18px) 20px 6px 68px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.head-date {
+  flex: 1;
+  line-height: 1.05;
+  min-width: 0;
+}
+/* "terça, 10 de novembro": escrito à mão, sem negrito (Bic não escreve em negrito) */
+.head-day {
+  margin: 0;
+  padding-top: 10px;
+  font-size: calc(var(--fs) * 1.3);
+  font-weight: 400;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.fire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: -6px;
+  min-width: 64px;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+.fire-count {
+  font-size: calc(var(--fs) * 0.95);
+  line-height: 1;
+  margin-top: -2px;
+  font-variant-numeric: tabular-nums;
+}
+.fire-count small {
+  font-size: 0.7em;
+  color: var(--ink-soft);
+}
+
+.status {
+  padding: 0 20px 0 68px;
+  font-size: calc(var(--fs) * 0.72);
+  color: var(--ink-soft);
+  min-height: 1.4em;
+}
+.status strong {
+  color: var(--ink);
+  font-weight: inherit;
+}
+
+.meter {
+  margin: 6px 20px 4px 68px;
+  height: 18px;
+  display: block;
+}
+.meter-clip {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  transition: transform 0.5s cubic-bezier(0.3, 0.7, 0.3, 1);
+}
+.meter path {
+  fill: none;
+  stroke-linecap: round;
+}
+
+/* folha pautada que rola; as linhas andam junto com o texto */
+.lines {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 calc(var(--lh) - 1px),
+    var(--line) calc(var(--lh) - 1px) var(--lh)
+  );
+  background-attachment: local;
+  background-position: 0 -4px;
+}
+.lines::-webkit-scrollbar {
+  display: none;
+}
+[data-paper="engenharia"] .lines {
+  background-image:
+    repeating-linear-gradient(to bottom, transparent 0 calc(var(--lh) - 1.5px), var(--line) calc(var(--lh) - 1.5px) var(--lh)),
+    repeating-linear-gradient(to bottom, transparent 0 calc(var(--lh) / 2 - 1px), color-mix(in srgb, var(--line) 55%, transparent) calc(var(--lh) / 2 - 1px) calc(var(--lh) / 2)),
+    repeating-linear-gradient(to right, transparent 0 calc(var(--lh) / 2 - 1px), color-mix(in srgb, var(--line) 55%, transparent) calc(var(--lh) / 2 - 1px) calc(var(--lh) / 2));
+}
+[data-paper="preto"] .lines {
+  background-image: radial-gradient(circle, var(--line) 1.3px, transparent 1.6px);
+  background-size: 23px 23px;
+  background-position: 6px 0;
+}
+
+.tasks {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0 calc(var(--lh) * 2);
+}
+.task {
+  position: relative;
+  touch-action: pan-y;
+}
+.task-row {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  min-height: var(--lh);
+  padding: 0 20px 0 10px;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.task.dragging .task-row {
+  transition: none;
+}
+.task-erase {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 22px;
+  font-size: calc(var(--fs) * 0.72);
+  color: var(--ink-soft);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.task.dragging .task-erase {
+  opacity: 1;
+}
+.check {
+  flex-shrink: 0;
+  width: 44px;
+  height: var(--lh);
+  display: grid;
+  place-items: center;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--ink);
+  cursor: pointer;
+}
+.check svg {
+  width: 26px;
+  height: 26px;
+  overflow: visible;
+}
+.check .tick {
+  stroke: var(--accent);
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.32s cubic-bezier(0.3, 0.7, 0.3, 1);
+}
+[data-paper="kraft"] .check .tick {
+  stroke-width: 3.4;
+  filter: drop-shadow(0 1px 1.5px rgb(0 0 0 / 0.3));
+}
+.task.done .check .tick {
+  stroke-dashoffset: 0;
+}
+.check:focus-visible,
+.btn:focus-visible,
+.writer input:focus-visible {
+  outline: 2px dashed var(--ink-soft);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.task-text {
+  flex: 1;
+  min-width: 0;
+  padding-left: 14px;
+  font-size: var(--fs);
+  line-height: var(--lh);
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  user-select: none;
+}
+.task-text span {
+  background-image: linear-gradient(var(--mark), var(--mark));
+  background-repeat: no-repeat;
+  background-size: 0% 52%;
+  background-position: 0 55%;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition:
+    background-size 0.38s cubic-bezier(0.3, 0.7, 0.3, 1),
+    color 0.3s;
+}
+.task.done .task-text span {
+  color: var(--ink-soft);
+  background-size: 100% 52%;
+}
+[data-paper="caderno"] .task.done .task-text span {
+  color: var(--ink);
+  mix-blend-mode: multiply;
+}
+/* risco ondulado à mão, um traço por linha de texto, desenhado ao marcar */
+.task-text {
+  position: relative;
+}
+.strike {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+.strike path {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.1;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  /* a ponta redonda deixaria um pingo mesmo com o traço "vazio": some depois de apagar */
+  opacity: 0;
+  transition:
+    stroke-dashoffset 0.42s cubic-bezier(0.3, 0.7, 0.3, 1),
+    opacity 0s linear 0.42s;
+}
+.task.done .strike path {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  transition:
+    stroke-dashoffset 0.42s cubic-bezier(0.3, 0.7, 0.3, 1),
+    opacity 0s;
+}
+[data-paper="caderno"] .strike {
+  display: none;
+}
+
+.task.fresh .task-text span {
+  animation: write 0.55s cubic-bezier(0.4, 0.1, 0.3, 1) both;
+}
+@keyframes write {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.empty {
+  padding: 0 24px 0 68px;
+  font-size: var(--fs);
+  line-height: var(--lh);
+  color: var(--ink-soft);
+}
+
+.writer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 10px calc(env(safe-area-inset-bottom) + 10px) 10px;
+  border-top: 1.5px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 70%, transparent);
+}
+.writer input {
+  flex: 1;
+  min-width: 0;
+  height: var(--lh);
+  padding: 0 4px 0 14px;
+  margin-left: 44px;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--fs);
+}
+.writer input {
+  text-overflow: ellipsis;
+}
+/* telas estreitas: o texto de exemplo encolhe um pouco pra caber inteiro em qualquer caneta */
+@media (max-width: 360px) {
+  .writer input::placeholder {
+    font-size: 0.86em;
+  }
+}
+.writer input::placeholder {
+  color: var(--ink-soft);
+  opacity: 0.85;
+}
+.writer input:focus {
+  outline: none;
+}
+.writer-pen {
+  position: absolute;
+  left: 18px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  color: var(--ink-soft);
+  pointer-events: none;
+}
+.btn {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--ink);
+  cursor: pointer;
+  border-radius: 50%;
+}
+.btn svg {
+  width: 28px;
+  height: 28px;
+}
+.btn:active {
+  transform: scale(0.92);
+}
+
+/* ───────────────────────── Folha queimada ───────────────────────── */
+.burn {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  animation: burn-in 1.6s ease-out both;
+}
+/* folha queimada: o conteúdo recua da borda carbonizada */
+.sheet.is-burnt .head {
+  padding-top: calc(env(safe-area-inset-top) + 24px);
+  padding-right: 26px;
+}
+.sheet.is-burnt .status,
+.sheet.is-burnt .empty {
+  padding-right: 26px;
+}
+.sheet.is-burnt .task-row {
+  padding-right: 40px;
+}
+.sheet.is-burnt .meter {
+  margin-right: 26px;
+}
+/* à direita a borda do pé é fina: os botões já têm folga, o campo mantém a largura */
+.sheet.is-burnt .writer {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 16px);
+}
+@keyframes burn-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* ───────────────────────── Fogo ───────────────────────── */
+.flame {
+  display: block;
+  transform-origin: 50% 92%;
+}
+.flame .f-body {
+  transform-origin: 50% 95%;
+  animation: flicker 1.6s ease-in-out infinite alternate;
+}
+.flame .f-core {
+  transform-origin: 50% 95%;
+  animation: flicker 1.1s ease-in-out infinite alternate-reverse;
+}
+.flame.waiting .f-body,
+.flame.waiting .f-core {
+  animation-duration: 3.4s;
+}
+@keyframes flicker {
+  0% {
+    transform: scale(1, 1) skewX(0deg);
+  }
+  35% {
+    transform: scale(0.96, 1.05) skewX(-2.5deg);
+  }
+  70% {
+    transform: scale(1.03, 0.97) skewX(2deg);
+  }
+  100% {
+    transform: scale(0.98, 1.03) skewX(-1deg);
+  }
+}
+
+/* ───────────────────────── Bilhetes (calendário, folhas) ───────────────────────── */
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: rgb(20 16 12 / 0.45);
+  animation: fade 0.25s ease-out both;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+.slip {
+  position: fixed;
+  z-index: 21;
+  left: 50%;
+  bottom: 0;
+  width: min(100%, 460px);
+  max-height: 88dvh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 -10px 40px rgb(0 0 0 / 0.35);
+  transform: translateX(-50%) rotate(-0.8deg);
+  animation: slip-up 0.42s cubic-bezier(0.2, 0.9, 0.25, 1) both;
+}
+@keyframes slip-up {
+  from {
+    transform: translate(-50%, 100%) rotate(2deg);
+  }
+}
+@media (min-width: 560px) {
+  .slip {
+    bottom: auto;
+    top: 50%;
+    border-radius: 3px;
+    transform: translate(-50%, -50%) rotate(-0.8deg);
+    animation-name: slip-in;
+  }
+  @keyframes slip-in {
+    from {
+      transform: translate(-50%, -40%) rotate(2deg);
+      opacity: 0;
+    }
+  }
+}
+.slip-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 10px 4px 20px;
+}
+.slip-title {
+  font-size: calc(var(--fs) * 1.25);
+  font-weight: 400;
+}
+.slip-body {
+  overflow-y: auto;
+  padding: 0 18px calc(env(safe-area-inset-bottom) + 22px);
+}
+.note {
+  font-size: calc(var(--fs) * 0.74);
+  color: var(--ink-soft);
+  line-height: 1.35;
+}
+/* destaque em nota: tinta cheia, nunca negrito (Bic não escreve em negrito) */
+.note strong {
+  color: var(--ink);
+  font-weight: inherit;
+}
+
+/* calendário */
+.cal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--fs);
+}
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-top: 4px;
+}
+.cal-wd {
+  font-size: calc(var(--fs) * 0.66);
+  color: var(--ink-soft);
+  padding-bottom: 4px;
+}
+.cal-day {
+  position: relative;
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 3px;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  font-size: calc(var(--fs) * 0.78);
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+}
+.cal-day:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+.cal-day .day-ring {
+  position: absolute;
+  inset: 0 3px 16px;
+  pointer-events: none;
+}
+.cal-day svg.mark {
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+}
+.cal-list {
+  margin-top: 10px;
+  border-top: 1.5px solid var(--line);
+  padding-top: 6px;
+}
+.cal-list .task-row {
+  padding-left: 0;
+}
+.cal-list .task-text {
+  font-size: calc(var(--fs) * 0.9);
+  line-height: 40px;
+  padding-left: 6px;
+}
+.cal-list .check {
+  height: 40px;
+}
+.pill {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 14px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px 900px 999px 950px;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-size: calc(var(--fs) * 0.78);
+  cursor: pointer;
+}
+.pill:active {
+  transform: scale(0.97);
+}
+
+/* coleção de folhas */
+.papers {
+  display: grid;
+  gap: 14px;
+  margin-top: 12px;
+}
+.swatch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 92px;
+  padding: 14px 16px;
+  text-align: left;
+  border: 0;
+  border-radius: 2px;
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 0.2),
+    0 6px 14px -6px rgb(0 0 0 / 0.35);
+  cursor: pointer;
+}
+.swatch:nth-child(odd) {
+  transform: rotate(0.5deg);
+}
+.swatch:nth-child(even) {
+  transform: rotate(-0.6deg);
+}
+/* bloqueada: a folha fica deitada na mesa (sem sombra de levantada) e
+   meio apagada de cor, mas o texto continua com contraste total */
+.swatch.locked {
+  cursor: default;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ink) 18%, transparent);
+  filter: grayscale(0.45);
+}
+.swatch-name {
+  font-size: calc(var(--fs) * 0.95);
+  line-height: 1.1;
+}
+.swatch-pen {
+  font-size: calc(var(--fs) * 0.7);
+  color: var(--ink-soft);
+}
+.swatch-tag {
+  margin-left: auto;
+  flex-shrink: 0;
+  text-align: right;
+  font-size: calc(var(--fs) * 0.68);
+  color: var(--ink-soft);
+}
+.swatch.current .swatch-tag {
+  color: var(--ink);
+}
+
+/* aviso flutuante */
+.toast {
+  position: fixed;
+  z-index: 30;
+  left: 50%;
+  bottom: calc(env(safe-area-inset-bottom) + 84px);
+  transform: translateX(-50%) rotate(-1deg);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: calc(100% - 32px);
+  padding: 10px 16px;
+  font-size: calc(var(--fs) * 0.8);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.35);
+  animation: slip-up 0.35s cubic-bezier(0.2, 0.9, 0.25, 1) both;
+}
+.toast button {
+  background: none;
+  border: 0;
+  color: var(--ink);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+  padding: 6px 0;
+}
+
+/* desbloqueio */
+.unlock {
+  position: fixed;
+  z-index: 31;
+  left: 50%;
+  top: 50%;
+  width: min(calc(100% - 40px), 360px);
+  padding: 26px 22px 20px;
+  text-align: center;
+  transform: translate(-50%, -50%) rotate(-1.5deg);
+  box-shadow: 0 20px 60px rgb(0 0 0 / 0.5);
+  animation: unlock-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes unlock-in {
+  from {
+    transform: translate(-50%, -30%) rotate(8deg) scale(0.8);
+    opacity: 0;
+  }
+}
+.unlock h2 {
+  font-size: calc(var(--fs) * 1.45);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 4px;
+}
+
+/* login */
+.login {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.login form {
+  width: min(100%, 380px);
+  padding: 30px 26px 26px 66px;
+  box-shadow: 0 24px 60px -12px rgb(0 0 0 / 0.6);
+  transform: rotate(-1deg);
+}
+.login h1 {
+  font-size: calc(var(--fs) * 1.75);
+  font-weight: 400;
+  line-height: 1;
+}
+.login input {
+  display: block;
+  width: 100%;
+  height: var(--lh);
+  margin-top: 6px;
+  border: 0;
+  border-bottom: 1.5px solid var(--line);
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--fs);
+  outline: none;
+}
+.login input::placeholder {
+  color: var(--ink-soft);
+}
+.login .err {
+  margin-top: 8px;
+  color: #b3261e;
+  font-size: calc(var(--fs) * 0.75);
+}
+/* foco: a pauta do campo fica na tinta da caneta */
+.login input:focus-visible {
+  border-bottom-color: var(--ink);
+}
+.login-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 18px;
+}
+.login-actions .pill {
+  margin-top: 0;
+}
+.login-switch {
+  background: none;
+  border: 0;
+  padding: 10px 0;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: calc(var(--fs) * 0.8);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.login-switch:focus-visible {
+  outline: 2px dashed var(--ink-soft);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.swatch .lock {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+.pill:disabled {
+  opacity: 0.5;
+}
+.login .margin-line {
+  left: 44px;
+}
+
+.slip-body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+.cal-day:focus {
+  outline: none;
+}
+.cal-day:focus-visible {
+  outline: 2px dashed var(--ink-soft);
+  outline-offset: -2px;
+}
+.note svg.mark {
+  width: 16px;
+  height: 16px;
+}
+
+.toast span {
+  white-space: nowrap;
+}
